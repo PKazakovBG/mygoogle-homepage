@@ -18,6 +18,64 @@
   justify-content: flex-end;
 
 }
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --border-color: #ddd;
+  --button-search-font: #3c4043;
+  --button-search-background: #f8f9fa;
+  --footer-background: #f2f2f2;
+  --footer-font: #70757a;
+  --footer-font-hover: #3c4043;
+  --footer-font-active: #ea4335;
+}
+
+body {
+  font-family: arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  background: var(--footer-background);
+  color: var(--footer-font);
+  font-size: 1.4rem;
+}
+
+.left-section,
+.right-section {
+  display: flex;
+}
+
+.right-section {
+  margin-right: 3rem;
+}
+
+.footer-link {
+  display: block;
+  padding: 1rem 0 1rem 3rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  color: var(--footer-font-hover);
+}
+
+.footer-link:active {
+  color: var(--footer-font-active);
+}
+
 
 .mypic {
 
@@ -28,12 +86,33 @@ justify-content: space-around;
   .text_input input[type="text"] {
   display: flex;
   height: 40px;
-  width: 600px;
+  width: 580px;
   text-align: center;
-  justify-content: center;
-  border-radius: 25px;
+  justify-content: space-between;
+  border-radius: 30px;
+  border: 0.1px solid var(--border-color);
   
       }
+
+     .text_input input[type="text"]:hover,
+.text_input input[type="text"]:focus-within {
+  border-color: white;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+}
+
+
+.search-pic  {
+  cursor: pointer;
+  width:25px;
+  height: 25px;
+  background-color: none;
+  
+
+}
+
+button {
+  border: none;
+}
 
 
       .text_input {
@@ -46,14 +125,25 @@ justify-content: space-around;
             }
       
     h4 {
-        display: flex;
+        display: block;
         padding: 15px 30px;
         border-bottom: 1px solid #dadce0;
         font-size: 15px;
         color: rgba(0,0,0,.54);
+
+        bottom: 0;
+        background: #f2f2f2;
+
     }
-      }
+    
       
+h3 {
+  display: flex;
+  padding: 5px 10px;
+          border-bottom: 1px solid #dadce0;
+
+
+}
 .profile {
   border-radius: 25px;
   margin-left: 1px;
@@ -125,5 +215,6 @@ justify-content: space-around;
 
 .text_input input:focus {
     outline: none;
+    border: 0.1px solid var(--border-color);
 }
 
